@@ -1,0 +1,32 @@
+<!-- navbar Ecushop -->
+<div>
+    <app-nav-ecushop (onEnter)= "getArticlesData($event)"></app-nav-ecushop>
+</div>
+<!-- cards individuales -->
+<div class="we-cat-container">
+    <!-- divisor de categorias -->
+    <div class="container we-container">
+        <div class="categories" *ngFor="let cat of categories">
+            <a>
+                {{cat.name}}<span></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row d-flex" >
+            <div class="we-col col-md-2 col-sm-6" *ngFor="let pro of products">
+                <a class="item"  routerLink="sale/{{pro.id}}">
+                    <div class="box">
+                        <img [src]="'http://localhost:8000/'+pro.image" width="100px">
+                    </div>
+                    <div class="box-info">
+                        <h5>{{pro.name}}</h5>
+                        <h5>{{pro.salePrice}}</h5>
+                        <p>{{pro.description}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

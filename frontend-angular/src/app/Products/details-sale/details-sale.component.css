@@ -1,0 +1,41 @@
+.we-card{
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.we-card-details{
+    padding: 1rem;
+}
+.we-details{
+    border-bottom: 1px solid #000;
+    font-size: large;
+}
+
+.we-card-car{
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 1rem;
+    box-shadow: 5px 4px 9px;
+    text-align: center;
+}
+h5{
+    font-size: x-large;
+}
+ img{
+     width: 400px;
+     height: 400px;
+ }
+
+ dt{
+     font-size: large;
+ }
+ dd{
+     font-size: large;
+ }
+ .btn-danger{
+     margin-top: 180px;
+ }
+ .btn-primary{
+     margin-top: 35px;
+
+ }

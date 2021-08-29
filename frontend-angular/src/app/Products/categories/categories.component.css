@@ -1,0 +1,83 @@
+/* Estilos para  la lista de categorias */
+.we-container{
+    background-color: white;
+}
+.we-cat-container{
+    background-color: var(--we-cat-container);
+}
+.categories{
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    width: 200px;
+}
+.categories:hover{
+    background-color: var(--we-orange);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Estilos para las pestañas */
+.we-container1{
+    background-color: #fff;
+    }
+    .tabs{
+    display: flex;
+    }
+    .tab{
+    text-align: center;
+    color: white;
+    background-color: #ff7300;
+    margin-bottom: 30px;
+    padding: 10px;
+    position: relative;
+    width: 200px;
+    }
+    .tab:hover{
+    font-weight: 500;
+    }
+    
+    .tab::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 100px;
+    border-top: 10px solid #ff7300;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    }
+    
+    /* Estilos para las cards individuales */
+    .we-container2{
+    background-color:#111949 ;
+    }
+    .we-col{
+    background-color: #fff;
+    padding: 0;
+    margin: 0.8rem;
+    border-radius: 0.8rem;
+    }
+    .item{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    }
+    
+    .box img{
+    width: 100%;
+    height: 230px;
+    border-radius: 0.8rem 0.8rem 0rem 0rem;
+    }
+    
+    .box-info{
+    padding: 0.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+    }

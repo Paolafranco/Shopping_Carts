@@ -1,0 +1,30 @@
+<app-navbar-manage></app-navbar-manage>
+<div class="we-cont">
+  <form class="we-form" (ngSubmit)="updateDataCategories()">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Nombre</label>
+      <div class="col-sm-10">
+        <input type="text" name="name" class="form-control" [(ngModel)]="categorie.name">
+      </div>
+      <label class="col-sm-2 col-form-label">Codigo</label>
+      <div class="col-sm-10">
+        <input type="text" name="condition" class="form-control" [(ngModel)]="categorie.condition">
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 col-form-label">Icono</label>
+        <select class="select-css btn mr-2" [(ngModel)]="categorie.icon">
+          <option value="👘">👘</option>
+          <option value="🔌">🔌</option>
+          <option value="🚗">🚗</option>
+          <option value="🏈">🏈</option>
+          <option value="🚧">🚧</option>
+          <option value="🏠">🏠</option>
+          <option value="💅">💅</option>
+        </select>
+      </div>
+    </div>
+    <div class="btn-cat">
+      <button>Actualizar Categoría</button>
+    </div>
+  </form>
+</div>

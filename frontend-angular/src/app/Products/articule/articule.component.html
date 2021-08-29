@@ -1,0 +1,16 @@
+<div>
+  <app-nav-ecushop (onEnter)= "getArticlesData($event)"></app-nav-ecushop>
+</div>
+<div class="container">
+  <div class="we-product" *ngFor="let art of articles let i=index">
+    <img routerLink="['sale/:id']"(click)="saleDetails()" [src]="'http://localhost:8000/'+art.image" style="width: 100px; height: 100px;">
+    <h1>{{art.name}}</h1>
+    <p>{{art.description}}</p>
+    <p>cantidad:<span>{{art.stock}}</span></p>
+    <!--    <td>
+              <a [routerLink]="[ '/pais', pais.alpha2Code ]">ver...</a>
+          </td> -->
+  </div>
+  <p>No hay resultados</p>
+</div> 
+

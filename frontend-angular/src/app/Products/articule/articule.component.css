@@ -1,0 +1,53 @@
+/* Estilos para los productos */
+.we-product{
+    background-color: white;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.we-col{
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: white;
+    border-radius: 10px;
+}
+.card{
+    border: none;
+}
+span{
+    display: flex;
+}
+svg{
+    margin-right: 10px;
+}
+.card-inf{
+    padding-top: 5px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+.img{
+    text-align: center;
+}
+img{
+    height: 80px;
+    width: 100px;
+}
+
+

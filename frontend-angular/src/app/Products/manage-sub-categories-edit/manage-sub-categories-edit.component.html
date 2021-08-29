@@ -1,0 +1,18 @@
+<app-navbar-manage></app-navbar-manage>
+<div class="we-cont">
+  <form class="we-form" (ngSubmit)="updatesubDataCategories()">
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input type="text" name="name" class="form-control" [(ngModel)]="subcategorie.name">
+        </div>
+        <label class="col-sm-2 col-form-label">id_categories</label>
+        <div class="col-sm-10">
+          <input type="text" name="id_categories" class="form-control" [(ngModel)]="subcategorie.id_categories">
+        </div>
+      </div>
+    <div class="btn-cat">
+      <button >Actualizar subCategoría</button>
+    </div>
+  </form>
+</div>
