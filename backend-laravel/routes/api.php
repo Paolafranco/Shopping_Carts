@@ -67,7 +67,8 @@ Route::get('/articules/{id}',[ArticuleController::class,'show']);
 Route::put('/articules/{id}',[ArticuleController::class,'update']);
 Route::delete('/articules/{id}',[ArticuleController::class,'destroy']);
 Route::get('/searchArticule/{name}', [ArticuleController::class, 'searchArticule']);
- 
+Route::get('/image/{name}', [ArticuleController::class, 'searchImage']);
+
 /* articule image  */
 Route::post('/createArticule',[ArticuleController::class,'createArticule']);
 /* ruta para el buscardor de prueba */

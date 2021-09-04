@@ -59,8 +59,14 @@ export class ServicesService {
     return this.httpClient.get(`http://127.0.0.1:8000/api/categories/${id}`);
   }
   
-  updateArticuleData(id: any, dataArticule: Articule) {
-    return this.httpClient.put(`http://127.0.0.1:8000/api/categories/${id}`, dataArticule);
+  updateArticuleData(id: any, dataArticule: Articule): Observable<Object> {
+  
+    console.log('antes de put');
+    console.log(dataArticule);
+    
+   
+    return this.httpClient.put(`http://127.0.0.1:8000/api/articules/${id}`, dataArticule);
+
   }
   //products
   getProductsData() {

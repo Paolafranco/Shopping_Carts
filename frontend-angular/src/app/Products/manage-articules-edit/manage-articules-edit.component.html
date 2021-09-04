@@ -1,31 +1,63 @@
 <app-navbar-manage></app-navbar-manage>
-<div class="we-cont">
-  <form (ngSubmit)="updateDataArticules()">
-    <div class="form-group">
-      <label for="">Codigo</label>
-      <input type="text" name="code" class="form-control" [(ngModel)]="articule.code">
+<div class="we-cont container">
+  <form class="we-form"  (ngSubmit)="updateDataArticules()">
+    <div class="form-group row">
+      <div class="form-group">
+        <label for="">Codigo</label>
+        <input type="text" name="code" class="form-control" [(ngModel)]="articule.code">
+      </div>
+      <div class="form-group">
+        <label for="">Codigo Postal</label>
+        <input type="text" name="codePostal" class="form-control" [(ngModel)]="articule.codePostal">
+      </div>
+      <div class="form-group">
+        <label for="">Stock</label>
+        <input type="text" name="stock" class="form-control" [(ngModel)]="articule.stock">
+      </div>
+      <div class="form-group">
+        <label for="">Descripcion</label>
+        <input type="text" name="description" class="form-control" [(ngModel)]="articule.description">
+      </div>
+      <div class="form-group">
+        <label for="">Imagen</label>
+        <input type="file" name="imageview" (change)="onFileChange($event)" class="form-control" [(ngModel)]="articule.image">
+        <img style="width: 100px; height: 100px;" *ngIf="imageview" class="img-fluid img-thumbnail image" src="{{imageview}}">
+      </div>
+      <div class="form-group">
+        <label for="">subcategories</label>
+        <input type="number" name="id_sub_categories"  class="form-control" [(ngModel)]="articule.id_sub_categories">
+      </div>
+    </div>  
+    <!-- <div class="form-group row">
+      <div class="form-group">
+        <label for="">Codigo</label>
+        <input type="text" name="code" formControlName="code" class="form-control" [(ngModel)]="articules.code">
+      </div>
+      <div class="form-group">
+        <label for="">Codigo Postal</label>
+        <input type="text" name="codePostal" formControlName="codePostal" class="form-control" [(ngModel)]="articules.codePostal">
+      </div>
+      <div class="form-group">
+        <label for="">Stock</label>
+        <input type="text" name="stock" formControlName="stock" class="form-control" [(ngModel)]="articules.stock">
+      </div>
+      <div class="form-group">
+        <label for="">Descripcion</label>
+        <input type="text" name="description" formControlName="description" class="form-control" [(ngModel)]="articules.description">
+      </div>
+      <div class="form-group">
+        <label for="">Imagen</label>
+        <input type="file" name="imageview" (change)="onFileChange($event)" formControlName="file" class="form-control" [(ngModel)]="articules.image">
+        <img style="width: 100px; height: 100px;" *ngIf="imageview" class="img-fluid img-thumbnail image" src="{{imageview}}">
+      </div>
+      <div class="form-group">
+        <label for="">subcategories</label>
+        <input type="number" name="id_sub_categories"  formControlName="id_sub_categories" class="form-control" [(ngModel)]="articules.id_sub_categories">
+      </div>
+    </div>   -->
+    <div class="btn-cat">
+      <!-- <button class="btn btn-dark btn-sm mt-4">Enviar</button> -->
+      <button>Enviar</button>
     </div>
-    <div class="form-group">
-      <label for="">Codigo Postal</label>
-      <input type="text" name="codePostal" class="form-control" [(ngModel)]="articule.codePostal">
-    </div>
-    <div class="form-group">
-      <label for="">Stock</label>
-      <input type="text" name="stock" class="form-control" [(ngModel)]="articule.stock">
-    </div>
-    <div class="form-group">
-      <label for="">Descripcion</label>
-      <input type="text" name="description" class="form-control" [(ngModel)]="articule.description">
-    </div>
-    <div class="form-group">
-      <label for="">Imagen</label>
-      <input type="file" name="image" class="form-control" [(ngModel)]="articule.image">
-    </div>
-    <div class="form-group">
-      <label for="">subcategories</label>
-      <input type="number" name="id_sub_categories" class="form-control" [(ngModel)]="articule.id_sub_categories">
-    </div>
-
-    <button class="btn btn-dark btn-sm mt-4">Enviar</button>
   </form>
 </div>

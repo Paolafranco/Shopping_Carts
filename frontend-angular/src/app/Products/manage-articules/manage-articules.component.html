@@ -55,6 +55,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let art of articules | paginate: { itemsPerPage: 3, currentPage: test }">
+        <tr *ngFor="let art of articules">
         <th scope="row">{{art.id}}</th>
         <td><img [src]="'http://localhost:8000/'+art.image" width="100px" height="100px"></td>
         <td>{{art.code}}</td>

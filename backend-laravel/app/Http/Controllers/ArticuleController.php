@@ -216,16 +216,21 @@ class ArticuleController extends Controller
      */
     public function update(Request $request, articule $articule, $id)
     {
+        
+        //echo("entro a update");
+        //dd($articule);
         $articule = articule::find($id);
         $articule->code = $request->get("code");
-        $articule->name = $request->get("name");
-        $articule->salePrice = $request->get("salePrice");
         $articule->codePostal = $request->get("codePostal");
         $articule->stock = $request->get("stock");
         $articule->description = $request->get("description");
+        //$articule->image = $request->file('file')->store('image');
+ 
         if (!empty($request->file('image'))) {
+            print_r("entro if");
             $url_image = $this->upload($request->file('image'));
             $articule->image = $url_image;
+            //$articule->image = $request->file('image')->store('image');
         }
         $articule->save();
         return $articule;
@@ -234,6 +239,8 @@ class ArticuleController extends Controller
         } else {
             echo "nel pastel";
         }
+
+       
     }
 
     /**
